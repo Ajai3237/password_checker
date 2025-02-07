@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <span class="card__title">password Checker</span>
+            <input id="input" oninput="checkpassword()" placeholder="Enter pass" type="password">
+            <p id="Display"> </p>
+            <p id="Displays"> </p>
+            <p id="Displayss"> </p>
+            <p id="Displaysss"> </p>
+        
+    </div>
+
+    <script>
+        function checkpassword(){
+           var password   = document.getElementById('input').value
+           
+            var Display = document.getElementById('Display');
+            var Display1 = document.getElementById('Displays')
+            var Display2 = document.getElementById('Displayss')
+            var Display3 = document.getElementById('Displaysss')
+            
+            if (password.length >= 8 &&  /[!@#$%^&*]/.test(password)) {
+                Display.innerHTML = 'Password : Strong';
+                Display.style.color = 'green'
+                 Display3.innerHTML = 'Conteins special Characters✅'
+                
+            }else if (password.length >= 6  && /\d/.test(password)) {
+                Display.innerHTML = 'Password : Medium';
+                Display.style.color = 'orange'
+                 Display2.innerHTML = 'Conteins Numbers✅'
+               
+            } else if(password.length < 6) {
+                Display.innerHTML = 'Password : Weak';
+                Display.style.color = 'red'
+                Display1.innerHTML = 'Conteins letters✅'
+            } else {
+                Display.innerHTML = 'Password : Weak';
+                Display.style.color = 'red'
+                Display1.innerHTML = 'Conteins letters';
+                
+            }
+        };
+    </script>
+
+</body>
+
+</html>
