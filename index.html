@@ -31,21 +31,21 @@
             if (password.length >= 8 &&  /[!@#$%^&*]/.test(password)) {
                 Display.innerHTML = 'Password : Strong';
                 Display.style.color = 'green'
-                 Display3.innerHTML = 'Conteins special Characters✅'
+                 Display3.innerHTML = 'Contains special Characters✅'
                 
             }else if (password.length >= 6  && /\d/.test(password)) {
                 Display.innerHTML = 'Password : Medium';
                 Display.style.color = 'orange'
-                 Display2.innerHTML = 'Conteins Numbers✅'
+                 Display2.innerHTML = 'Contains Numbers✅'
                
             } else if(password.length < 6) {
                 Display.innerHTML = 'Password : Weak';
                 Display.style.color = 'red'
-                Display1.innerHTML = 'Conteins letters✅'
+                Display1.innerHTML = 'Contains letters✅'
             } else {
                 Display.innerHTML = 'Password : Weak';
                 Display.style.color = 'red'
-                Display1.innerHTML = 'Conteins letters';
+                Display1.innerHTML = 'Contains letters';
                 
             }
         };
